@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style type="text/css" media="screen">
+      .destacado{
+        color: #fc0;
+      }
+    </style>
+    
+
+    <title>JS.linkedin</title>
+
+    
+  </head>
+  <body>
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-12">
+                <h1 id="nombre">Nombre del detalle</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto in voluptatibus ipsum. Incidunt nam fuga at illo magni earum labore, ut iure fugit veniam eius accusamus, aperiam iste autem eligendi.</p>
+                <blockquote>
+                  <p id="descripcion">Esto es una descripcion</p>
+                  <footer>
+                    <script>
+                      let fecha = new Date();
+                      let dia = fecha.getDate();
+                      let mes = fecha.getMonth();
+                      let año = fecha.getFullYear();
+                      document.write(dia + '/' +  mes + '/' + año);
+                    </script>
+
+                  </footer>
+                </blockquote>
+              </div>
+          </div>
+      </div>
+
+      <script>
+        let element;
+        let descripcion;
+
+        descripcion = document.getElementById('descripcion');
+        console.log(descripcion);
+        descripcion = 'Modificada.';
+        document.getElementById('descripcion').innerHTML = descripcion;
+
+        element = document.querySelector('h1');
+        elemento.className += 'destacado';
+
+
+        //como acceder con jquery mediante un id
+        $('#descripcion')//jquery
+        document.getElementById('description')//JS puro
+
+        // acceder con etiqueta
+        $('h1')//jquery
+        document.getElementsByTagName('h1')//JS puro
+
+        //mediante  una clase
+        $('p.nombre-clase')//jquery
+        document.querySelectorAll('p.nombre-clase')//javascrip puro
+      </script>
+    
+
+
+
+
+
+     
+      <script src="./js/index.js"></script>
+      <script src="./js/DeclaracionVariables.js"></script>
+      <script src="./js/operacionseCadenas.js"></script>
+      <script src="./js/OperacionesDatosLogicos.js"></script>
+      <script src="./js/prioridadDeOperadores.js"></script>
+      <script src="./js/OperadoresComparacion.js"></script>
+
+      <script src="./js/array.js"></script>
+      <script src="./js/objetos.js"></script>
+   
+   
+   
+   
+  </body>
+</html>
+   

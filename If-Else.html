@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style type="text/css" media="screen">
+      .destacado{
+        color: #fc0;
+      }
+    </style>
+    
+
+    <title>JS.linkedin</title>
+
+    
+  </head>
+  <body>
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-12">
+                <h1>Estructuras de For.</h1>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-12">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores cum earum dignissimos asperiores perspiciatis ducimus iste officiis. Atque ratione aperiam, soluta iusto velit accusamus illum quo molestiae vel optio commodi.</p>
+
+              <ul id="menu" class="list-group list-group-horizontal justify-content-evenly">
+                  <li class="align-items-certer ">Primero</li>
+                  <li class="align-items-certer">Segundo</li>
+                  <li class="align-items-certer">Tercero</li>
+                  <li class="align-items-certer">Cuarto</li>
+                  <li class="align-items-certer">Quinto</li>
+              </ul>
+          </div>
+      </div>
+
+
+      <script>
+          let elemento = document.getElementById('menu').className;
+
+          if (elemento.indexOf('prueba') >= 0) {
+              
+            //instrucciones si se cumple el condicional
+              console.log('el menu tiene la palabra prueba.')//la he eliminado para que se cumpla la siguiente 
+
+          } else if (elemento.indexOf('list-group') >= 0) {
+              //intrucciones si se cumple la condicion
+              document.getElementById('menu').style.fontSize =' 30px';
+              console.log('el menu tiene la clase list-group.');
+
+          } else{
+              //instrucciones si no se cumple ninguna condicion de las anteriores
+              console.log('el menu no tiene ninguna de las dos condiciones anteriores.')
+          }
+          
+      </script>

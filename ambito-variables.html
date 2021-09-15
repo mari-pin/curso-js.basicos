@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style type="text/css" media="screen">
+      .destacado{
+        color: #fc0;
+      }
+    </style>
+    
+
+    <title>JS.linkedin</title>
+
+    
+  </head>
+  <body>
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-12">
+                <h1>Ambito de las variables.</h1>
+              </div>
+          </div>
+      
+      <div class="row">
+          <div class="col-xs-12">
+              <script>
+                  console.log('--------------------');
+                  console.log('Antes de definir global: ');
+                  console.log(global);
+              </script>
+          </div>   
+      </div>
+    </div>
+
+      <script>
+        var global = 'hola';
+        console.log('----------------');
+        console.log('Ambito general de la ventana(objeto window):');
+        console.log('Valor global: ' + window.global);
+            // comentamos esta linea porque al estar declarada la variable (var local)en la funcion de abajo no la encuentra nos da error xk al estar dentro de una funcion aunke este en el mismo escript no la encuentra.
+
+        //console.log('Valor local:'+local);
+
+        miFuncion();
+        // en  las funcines normales se declara antes la variable para que cuando el programa la busque la pueda encontar 
+        function miFuncion() {
+             
+            var local = 'adios';
+            
+            console.log('----------------');
+            console.log('Dentro de la miFuncion');
+            console.log('Valor global: ' + global);
+            console.log('Valor local: '+ local);
+
+        }
+
+        //variable con una funcion dentro la variable se declara fuera de la funcion 
+        var miFuncionLiteral = function () {
+            console.log('----------------');
+            console.log('Esto es una funcion literal.');
+            console.log('Valor global: ' + global);
+        }
+        miFuncionLiteral();
+      </script>
+  </body>      

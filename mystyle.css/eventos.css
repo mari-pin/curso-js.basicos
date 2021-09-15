@@ -1,0 +1,8 @@
+#calcular{
+    -webkit-transition: .3s linear 0;
+    -o-transition: all .3s linear 0;
+    transition: all .3s linear 0;
+}
+.sobre{
+    margin-left: 20px;
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style type="text/css" media="screen">
+      .destacado{
+        color: #fc0;
+      }
+    </style>
+    
+
+    <title>JS.linkedin</title>
+
+    
+  </head>
+  <body>
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-12">
+                <h1>Estructuras de For.</h1>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-12">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores cum earum dignissimos asperiores perspiciatis ducimus iste officiis. Atque ratione aperiam, soluta iusto velit accusamus illum quo molestiae vel optio commodi.</p>
+
+              <ul id="menu" class="list-group list-group-horizontal justify-content-evenly">
+                  <li class="align-items-certer justify-content-evenly">Primero</li>
+                  <li class="align-items-certer">Segundo</li>
+                  <li class="align-items-certer">Tercero</li>
+                  <li class="align-items-certer">Cuarto</li>
+                  <li class="align-items-certer">Quinto</li>
+              </ul>
+          </div>
+      </div>
+
+
+      <script>
+          let elementos;
+          elementos = document.querySelectorAll('#menu>li');
+          i = 0;
+          longitud = elementos.length;
+
+          for (i=0; i<longitud; i++){
+              elementos[i].style.fontSize = '20px';
+          };
+      </script>

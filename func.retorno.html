@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style type="text/css" media="screen">
+      .destacado{
+        color: #fc0;
+      }
+    </style>
+    
+
+    <title>JS.linkedin</title>
+
+    
+  </head>
+  <body>
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-12">
+                <h1>Funciones Retorno</h1>
+                <h2>Valores deuvueltos por una función.</h2>
+                <p> El objetivo de las funciones es crear un valor que podemoos recuperar más tarde con el flujo del programa</p>
+                <br>
+                <p>El objetivo de este ejercicio es que nos devuelva en consola el factorial del numero y le aplicamos el factorial de ese numero, y luego lo usamos en otro sitio.</p>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-xs-12">
+              <dir id="resultado"></dir>
+             
+          </div>   
+      </div>
+
+      <script>
+          
+          // llamamos a la funcion mediante el id y asi busca por el DOM la etiqueta html que tiene el texto "resultado"
+      var capaResultado = document.getElementById('resultado');
+
+      function aRGB(hexadecimal) {
+          let valorHex;
+     // comprueba si lleva la almoadilla 
+     //charAt (devuelve el caracter que esta en la posicion que le indicamos.) 
+      if (hexadecimal.charAt(0)==="#"){
+          // si la lleva  la elimina y se queda solo con los numeros por eso va del 1 al 7 (son 6 numeros y la almoadilla.)
+          valorHex =hexadecimal.substring(1,7);
+      }else{
+        valorHex =hexadecimal;
+        hexadecimal = '#' + hexadecimal;
+      }
+      // coje el valor del inicio y el del fin y los aplica a base 16.
+      // convierte los numeros a base 16 para sacar el hexadecimal.
+      R = parseInt(valorHex.substring(0,2), 16 );
+      G = parseInt(valorHex.substring(2,4), 16 );
+      B = parseInt(valorHex.substring(4,6), 16 );
+      //substring(devuelve el fragmneto de la cadena que se le pasa entre el valor de inicio y el de fin)
+      //parseInt(devuelve la conversion a numero entero del valor que se le pasa)
+      console.log('Red: ' + R);
+      console.log('Green: ' + G);
+      console.log('Blue: ' + B);
+    
+    //para que devuelva una cadena de texto.(la he comentado para que la segunda opcion no me de error)
+      //return 'El codigo hexadecimal <span style="background-color: '+hexadecimal+'"> '+hexadecimal+'</span> en RGB es ('+R+', '+G+', '+B+')';
+    
+
+      // si queremos que devuelva un array
+        //return [ R, G, B];
+
+    //para que devuelva un objeto
+     return { rojo: R, verde: G, azul: B};
+    
+    }
+
+
+    // 1 opcion return cadena
+    //capaResultado.innerHTML= aRGB('#FFCC00');
+
+    // 2 opcion return array
+    var codigosColorRGB = aRGB('#FFCC00')
+      console.log('Red: ' + codigosColorRGB[0]);
+      console.log('Green: ' + codigosColorRGB[1]);
+      console.log('Blue: ' + codigosColorRGB[2]);
+
+
+    // 3 opcion return un objeto
+    var codigosColorRGB = aRGB('#FFCC00')
+      console.log('Red: ' + codigosColorRGB.rojo);
+      console.log('Green: ' + codigosColorRGB.verde);
+      console.log('Blue: ' + codigosColorRGB.azul);
+
+
+      </script>
+  </body>      

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style type="text/css" media="screen">
+      .destacado{
+        color: #fc0;
+      }
+    </style>
+    
+
+    <title>JS.linkedin</title>
+
+    
+  </head>
+  <body>
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-12">
+                <h1>Funciones JS. Que son y para que sirven.</h1>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-12">
+              <p>las funciones se emplean para reutilizar fragmentos de código  que son aplicables a diferentes partes del programa, aunque con diferentes valores, exponen la misma funcionalida.</p>
+          </div>   
+      </div>
+
+      <script>
+         function saludar(nombre) {
+             console.log('Hola '+nombre+'.');
+             console.log('¿Como estas?');
+         }
+         function calcularAreaRectangulo(base,altura) {
+             console.log('El area es: '+(base*altura));
+         }
+
+         saludar('Marcos');
+         saludar('Pepe');
+         saludar('Maria');
+        
+         calcularAreaRectangulo(2,4);
+         calcularAreaRectangulo(10,20);
+      </script>
+  </body>      
